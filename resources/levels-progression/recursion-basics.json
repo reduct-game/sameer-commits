@@ -168,7 +168,7 @@
             "fade": {},
             "globals": {},
             "goal": [],
-            "input":["(20,10), (12,5), (16,15)"],
+            "input":["(20,10)", "(12,5)", "(16,15)"],
             "output":["10","7","1"],
             "syntax": [],
             "textgoal": "Define a function that outputs the difference between two numbers",
