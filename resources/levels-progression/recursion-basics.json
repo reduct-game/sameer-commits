@@ -109,7 +109,6 @@
         {
             "animationScales": {},
             "board": [
-                "function maybe () {return A;}",
                 "function countAboveTen(x) { return _; }",
                 "__autograder(_)",
                 "_ == _",
