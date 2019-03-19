@@ -1,0 +1,46 @@
+#!/bin/bash
+
+source="reduct-redux"
+
+for d in "../reduct-redux" "$HOME/reduct-redux"
+do
+    if [[ ! -d "$source/.git" ]]
+    then
+        source="$d"
+    fi
+done
+
+if [[ ! -d "$source/.git" ]]
+then
+  echo "Can't find reduct-redux directory to read from"
+  exit 1
+fi
+
+echo "Building from $source"
+
+(
+    cd "$source"
+
+    (cd chapterutil; make)
+
+    rm -rf dist .cache
+    if [[ ! -d dist ]]
+    then
+        mkdir dist
+    fi
+
+    if [[ -x `which yarn` ]]
+    then
+        yarn dist
+    elif [[ -x `which npm` ]]
+    then
+        npm run dist
+    else
+        echo "Can't find yarn or npm"
+    fi
+
+    ln -s ../resources dist/resources
+)
+
+rsync -Lr ${source}/dist/ ./
+echo "Use git add/git commit/git push to push updates"
