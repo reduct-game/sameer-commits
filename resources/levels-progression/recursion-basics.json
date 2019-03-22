@@ -158,8 +158,8 @@
             "animationScales": {},
             "board": [
                 "function difference(x,y) { return _; }",
+                "_ == _ ? _ : _",
                 "__autograder(_)",
-                "_ == _",
                 "difference"
             ],
             "defines": [
@@ -168,8 +168,9 @@
             "fade": {},
             "globals": {},
             "goal": [],
-            "input":["(20,10)", "(12,5)", "(16,15)"],
-            "output":["10","7","1"],
+            "input":["(20, 10)", "(12, 5)", "(16, 15)"],
+            "output":["10", "7", "1"],
+            "numTests":3,
             "syntax": [],
             "textgoal": "Define a function that outputs the difference between two numbers",
             "toolbox": [
