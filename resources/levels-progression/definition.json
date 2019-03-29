@@ -223,8 +223,7 @@
                 "_(3)",
                 "_(4)",
                 "_(8)",
-                "5",
-                "__autograder(_)"
+                "5"
             ],
             "fade": {},
             "globals": {},
@@ -233,6 +232,8 @@
                 "6",
                 "8"
             ],
+            "input":["1","2","3"],
+            "output":["3","6","9"],
             "syntax": [],
             "toolbox": [
                 "__unlimited;addOne;",
@@ -244,7 +245,7 @@
             "animationScales": {},
             "board": [
               "function countAboveFive(num){ return num == 5 ? 0: countAboveFive(num - 1)  + 1;}",
-                "__autograder(_)"
+                "__autograder(0)"
             ],
             "defines": [
                 "function countToFive(x) { return x == 5 ? x : countToFive(x + 1); }"
