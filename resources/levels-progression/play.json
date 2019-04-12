@@ -3,104 +3,23 @@
     "description": "Booleans and Arrays",
     "language": "JavaScript",
     "levels": [
-        {
+      {
           "animationScales": {},
           "board": [
-            "[1,2,3] == [1,_,3]"
+              "function identity(x){ return x;}"
           ],
+          "fade": {},
           "globals": {},
-          "goal":[
-            "true"
-          ],
+          "goal": [],
           "syntax": [],
-          "input":[],
-          "defines":[
-            "function nonZero(a,i) {return a}",
-            "function indexOf_0(a,i) {return a}"
-          ],
-          "textgoal":"Make the arrays equal!",
-          "toolbox":[
-            "1",
-            "2",
-            "3"
+          "input":["(5, 5)", "(57, 55)", "(59, 45)", "(239, 234)"],
+          "output": ["0", "2", "14", "5"],
+          "numTests":4,
+          "textgoal": "Make your level",
+          "toolbox": [
+            "countDown"
           ]
-        },
-        {
-          "animationScales": {},
-          "board": [
-            "[0,0,0,3,8,9,0]",
-            "_ ? _ : _",
-            "_ + _",
-            "function nonZero(a,i) { return _ }"
-          ],
-          "globals": {},
-          "goal":[
-            "3"
-          ],
-          "syntax": [],
-          "textgoal":"Return 1st non zero element",
-          "toolbox":[
-            "_ == _",
-            "_(_)",
-            "__unlimited;_[_]",
-            "!_",
-            "__unlimited;a",
-            "__unlimited;i",
-            "__unlimited;nonZero",
-            "0",
-            "1",
-            "0"
-          ]
-        },
-        {
-          "animationScales": {},
-          "board": [
-            "_ ? _ : _",
-            "[1,2,3,4,0,5,7,0]",
-            "function indexOf_0(a,i) {return _}",
-            "_ + _"
-          ],
-          "globals": {},
-          "goal":[
-            "4"
-          ],
-          "syntax": [],
-          "textgoal":"return the index of first 0!",
-          "toolbox":[
-            "_ == _",
-            "_(_)",
-            "__unlimited;_[_]",
-            "!_",
-            "__unlimited;indexOf_0",
-            "__unlimited;a",
-            "__unlimited;i",
-            "__unlimited;0",
-            "1"
-          ]
-        },
-        {
-          "animationScales": {},
-          "board": [
-            "[_,_,A,[_,A]] == [C,_,_,_]"
-          ],
-          "globals": {},
-          "goal":[
-            "true"
-          ],
-          "syntax": [],
-          "textgoal":"Arrays can have arrays",
-          "toolbox":[
-            "C",
-            "A",
-            "A",
-            "A",
-            "B",
-            "B",
-            "C",
-            "C",
-            "[_,_]"
-          ]
-        }
+      }
     ],
     "macros": {
         "A": "'star'",
