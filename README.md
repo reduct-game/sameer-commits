@@ -14,24 +14,25 @@ Press Ctrl + F11 to open the 'Add Node' dialogue box. It will ask for the string
 
 #### Defining the node string:
 This is the same as writing the node string in a csv file. Defining new features (marked with a $$) need some special care explained later. Some examples:
-**Definig function**
-    `function addOne (x) { return (x) + 1; }`
+<br>
+**Definig function**<br>
+    `function addOne (x) { return (x) + 1; }`  
     `function myRepeat(num, func, value){ return num == 0 ? _ : func(myRepeat(_, func));}`
 
-**Defining if blocks**
-    `_ == _ ? 5 : 4`
-    `num => num == addOne(5) ? true : false`
+**Defining if blocks**<br>
+    `_ == _ ? 5 : 4`  
+    `num => num == addOne(5) ? true : false`  
 
 **Defining references($$)**
-    You can use ***previously*** defined references directly anywhere on board or toolbox.
-    `addOne`
-    `doNothing`
-    etc...
-NOTE - if you are defining references in toolbox with `__unlimited` tag, you need to add the corresponding tag in the csv file when you download it.
+    You can use ***previously*** defined references directly anywhere on board or toolbox.  
+    `addOne`  
+    `doNothing`  
+    etc...  
+NOTE - if you are defining references in toolbox with `__unlimited` tag, you need to add the corresponding tag in the csv file when you download it.  
 
-**Defining autograder($$)**
-To define an autograder, you can use the following syntax:
-       `__autograder(i)` where i ranges in {0,...,4}
+**Defining autograder($$)**<br>
+To define an autograder, you can use the following syntax:  
+       `__autograder(i)` where i ranges in {0,...,4}  
        `__autograder(0)` is ***adversarial***, i.e it will look for a pair where user defined function breaks. If no such pair exists, it returns the first pair at index 0. 
 
 -If you are defining an autograder(with index i), you should define a missing node `_` in the goal at the ith position so that autograder can fill it later.
