@@ -40,7 +40,7 @@ To define an autograder, you can use the following syntax:
 -If you are defining an autograder, you need to add input and output fields to csv manually. Using autograder(i) requires at least *i* input-output pairs to be defined in CSV. 
 
 #### When do you need to modify csv manually:
-* Adding modifiers such as __unlimited, __argumentAnnonated to the nodes has to be done manually
+* Adding modifiers such as __unlimited, __argumentAnnotated to the nodes has to be done manually
 * You need to define input and output lists manually in csv if you are using an autograder
 
 #### Downloading CSV
